@@ -13,6 +13,7 @@ body {
     font-family: 'Inter', sans-serif;
     background: radial-gradient(circle at top, #1b1b1b 0%, #000 80%);
     color: #f5f5f5;
+    overflow-x: hidden;
 }
 
 .container {
@@ -96,11 +97,73 @@ p {
     font-size: 14px;
     color: #777;
 }
+
+/* === INTRO === */
+
+#intro {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-content {
+    text-align: center;
+    animation: fadeOut 1s ease forwards;
+    animation-delay: 4.5s;
+}
+
+#slogan {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    font-size: 28px;
+    letter-spacing: 2px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+#logo {
+    margin-top: 40px;
+    font-family: 'Anton', sans-serif;
+    font-size: 64px;
+    letter-spacing: 4px;
+    color: #ffb400;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 2s;
+}
+
+#logo span {
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
 </style>
 </head>
 
 <body>
 
+<!-- INTRO -->
+<div id="intro">
+    <div class="intro-content">
+        <div id="slogan">Freedom is not given.<br>It’s taken.</div>
+        <div id="logo">JAIL<span>IONAIRE</span></div>
+    </div>
+</div>
+
+<!-- MAIN PAGE -->
 <div class="container hero">
     <h1>JAIL<span>IONAIRE</span></h1>
     <p>
@@ -116,10 +179,9 @@ p {
 <div class="container section">
     <h2>Das Problem</h2>
     <p>
-        Die meisten Männer sind nicht frei.<br><br>
-        Sie sind müde, abhängig, pleite, unkonzentriert und gefangen in einem System,
+        Die meisten Männer sind nicht frei.  
+        Sie sind müde, abhängig, pleite und kontrolliert von einem System,
         das sie nicht verstehen.  
-        Sie leben von Dopamin-Kick zu Dopamin-Kick, von Gehalt zu Gehalt.
         Bequem – aber eingesperrt.
     </p>
 </div>
@@ -129,11 +191,9 @@ p {
     <p>
         JAILIONAIRE ist kein Motivationstalk.  
         Kein Fitnesskurs.  
-        Kein Crypto-Hype.
+        Kein Crypto-Hype.  
         <br><br>
         Es ist ein System, das dich neu aufbaut – körperlich, mental und finanziell.
-        Wie ein Mann, der im Gefängnis Disziplin gelernt hat
-        und damit totale Kontrolle über sein Leben zurückholt.
     </p>
 </div>
 
@@ -149,22 +209,9 @@ p {
     </div>
 </div>
 
-<div class="container section">
-    <h2>So funktioniert es</h2>
-    <p>
-        1. Du klickst auf den WhatsApp-Button.<br>
-        2. Du schreibst: <b>„I am ready.“</b><br>
-        3. Du bekommst die Infos für deinen 30-Tage-Access.<br>
-        4. Jeden Tag erhältst du Training, Aufgaben & Mental Conditioning.<br>
-        5. Du wirst stärker – oder du bleibst derselbe.
-    </p>
-</div>
-
 <div class="container section hero">
     <h2>No comfort. Only growth.</h2>
-    <p>
-        Disziplin. Struktur. Freiheit.
-    </p>
+    <p>Disziplin. Struktur. Freiheit.</p>
 
     <a class="button" href="https://wa.me/XXXXXXXXXX" target="_blank">
         Enter JAILIONAIRE
@@ -174,6 +221,12 @@ p {
 <div class="footer">
     © 2026 JAILIONAIRE – Freedom is not given. It is taken.
 </div>
+
+<script>
+setTimeout(() => {
+    document.getElementById("intro").style.display = "none";
+}, 5500);
+</script>
 
 </body>
 </html>
