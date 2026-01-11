@@ -11,14 +11,11 @@
 body{
     margin:0;
     font-family:Inter,sans-serif;
-    background:repeating-linear-gradient(
-      45deg,
-      #e3e3e3,
-      #e3e3e3 10px,
-      #d6d6d6 10px,
-      #d6d6d6 20px
-    );
-    color:#111;
+    background:#2b2b2b;
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.03) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(0,0,0,0.4) 0%, transparent 50%);
+    color:#f2f2f2;
     overflow-x:hidden;
 }
 
@@ -68,11 +65,13 @@ h2{font-size:42px;margin-top:80px}
     margin-top:40px;
 }
 .box{
-    background:rgba(255,255,255,.7);
+    background:rgba(0,0,0,.4);
     padding:30px;
     border-left:6px solid #b30000;
     font-family:"Bebas Neue",sans-serif;
     font-size:24px;
+    color:#fff;
+    box-shadow:0 0 30px rgba(0,0,0,.6);
 }
 
 /* INTRO */
